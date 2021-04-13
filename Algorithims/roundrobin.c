@@ -42,7 +42,7 @@ int main()
                   printf("\nProcess[%d]\t\t%d\t\t %d\t\t\t %d\t\t %d", i + 1, burst_time[i], total - arr_time[i], total - arr_time[i] - burst_time[i], response[i]);
                   wait_time = wait_time + total - arr_time[i] - burst_time[i]; 
                   turn_around = turn_around + total - arr_time[i]; 
-                  response[i] = response[i] + burst_time[i]; 
+                  response[i] = response[i] + total - burst_time[i]; 
                   per = 0;  //The counter is cleared to prepare for the next time
             } 
             else if(i == limit - 1)    //process executed
